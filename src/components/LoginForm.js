@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useNavigate } from 'react-router-dom';
 //import ReactDOM from "react-dom";
 import "./LoginPage.css"
 import { GoogleLoginButton,AppleLoginButton } from "react-social-login-buttons";
@@ -12,7 +13,7 @@ const LoginForm = () => {
     // User Login info
     const database = [
       {
-        username: "user1",
+        username: "joe@gmail.com",
         password: "pass1"
       },
       {
@@ -42,6 +43,8 @@ const LoginForm = () => {
           setErrorMessages({ name: "pass", message: errors.pass });
         } else {
           setIsSubmitted(true);
+          navigate('/home');
+
         }
       } else {
         // Username not found
@@ -57,6 +60,7 @@ const LoginForm = () => {
   
     // JSX code for login form
     const renderForm = (
+      
       <div className="form">
         <form onSubmit={handleSubmit}>
           <div className="input-container">
@@ -76,31 +80,40 @@ const LoginForm = () => {
         </form>
       </div>
     );
+    const handleGoogleLoginResolve = ({ provider, data }) => {
+      console.log(provider, data);
+      
+      navigate('/home'); 
+    };
+    
+    const handleGoogleLoginReject = (err) => {
+      console.log(err);
+    };
+    const navigate=useNavigate();
   return (
      <>
-
-     <div className="container"></div>
      
-    
+      <div className="container"> </div> 
+     <div className="hhhh"><h1 className="hhhhh">Sign In</h1>
+     <h5>Sign In to your account</h5></div>
+     
     <div className='f'>
-     {/* <div className="sp">
-     <h1>
-        Sign In
-     </h1>
-     </div> */}
-    <LoginSocialGoogle
+  
+    <LoginSocialGoogle   
       client_id={"833190357657-ec9tciu17ls4aiqme9ng54gtq0kj842r.apps.googleusercontent.com"}
       scope="openid profile email"
       discoveryDocs="claims_supported"
       access_type="offline"
-      onResolve={({ provider, data }) => {
-        console.log(provider, data);
-      }}
-      onReject={(err) => {
-        console.log(err);
-      }}
+      onResolve={handleGoogleLoginResolve}
+      onReject={handleGoogleLoginReject}
     >
-      <GoogleLoginButton className='hh' />
+      <GoogleLoginButton className='hh' 
+       style={{
+             
+        color: "grey",
+        borderRadius:"12px",
+        height:"40px"
+      }} />
 
     </LoginSocialGoogle>
      <LoginSocialGoogle
@@ -116,7 +129,14 @@ const LoginForm = () => {
         
       }}
     >
-      <AppleLoginButton className='hh'/>
+      <AppleLoginButton className='hh'
+       style={{
+             
+        color: "grey",
+        borderRadius:"12px",
+        height:"40px"
+      }}
+      />
       
     </LoginSocialGoogle>
     
@@ -126,7 +146,9 @@ const LoginForm = () => {
        
         {isSubmitted ? <div>User is successfully logged in</div> : renderForm}
       </div>
+      <div className="hhh">Do not have an account? <span>Register here</span></div>
     </div></div>
+   
   </>
   )
 }

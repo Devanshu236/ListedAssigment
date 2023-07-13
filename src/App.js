@@ -10,13 +10,13 @@ import { productInputs ,userInputs} from "./formS";
 import "./style/dark.scss";
 import { useContext } from "react";
 import { DarkModeContext } from "./context/darkModeContext";
-// import LoginForm from "./components/LoginForm";
+ import LoginForm from "./components/LoginForm";
 
 function App() {
- const { darkMode } = useContext(DarkModeContext);
+ //const { darkMode } = useContext(DarkModeContext);
 
   return (
-    <div className={darkMode ? "app dark" : "app"}>
+   /* <div className={darkMode ? "app dark" : "app"}>
       <BrowserRouter>
         <Routes>
           <Route path="/">
@@ -41,10 +41,15 @@ function App() {
           </Route>
         </Routes>
       </BrowserRouter>
-    </div>
-    // <>
-    // <LoginForm></LoginForm>
-    // </>
+    </div>*/
+    <BrowserRouter>
+     <Routes>
+     <Route exact path="/" element={<LoginForm/>}/>
+          <Route exact path="/home" element={<Home/>}/>
+     </Routes>
+     </BrowserRouter>
+     
+     
   );
 }
 

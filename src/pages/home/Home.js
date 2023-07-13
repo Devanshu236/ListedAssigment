@@ -10,6 +10,7 @@ import Widget from "../../components/widget/Widget";
 import Featured from "../../components/featured/Featured";
 import Chart from "../../components/chart/Chart";
 import Sidebar from "../../components/sidebar/Siderbar";
+import Navbar from "../../components/navbar/Navbar";
 
 
 
@@ -21,6 +22,7 @@ const Home = () => {
       {/* <Sidebar></Sidebar> */}
       <Sidebar></Sidebar>
       <div className="homeContainer">
+        <Navbar></Navbar>
       
         <div className="widgets">
           <Widget type="user" />

@@ -4,6 +4,7 @@ import "./single.scss";
 import Chart from "../../components/chart/Chart";
 import List from "../../components/table/Table";
 import Sidebar from "../../components/sidebar/Siderbar";
+import Navbar from "../../components/navbar/Navbar";
 
 const Single = () => {
   return (
@@ -11,7 +12,7 @@ const Single = () => {
       <Sidebar></Sidebar>
    
       <div className="singleContainer">
-       
+       <Navbar></Navbar>
         <div className="top">
           <div className="left">
             <div className="editButton">Edit</div>

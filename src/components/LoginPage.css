@@ -1,106 +1,192 @@
-.container{
-    background-color: #000000;
-    height: 927px;
-    position: absolute;
-    width: 900px;
-    margin: -290px;
+*{
+  padding: 0;
+  margin: 0;
+}
+.container {
+  background-color: #000000;
+  height: 927px;
+  position: absolute;
+  width: 900px;
+  margin: -290px;
 }
 
-.f{
-    display: flex;
-    flex-direction: row;
-    color: grey;
-    margin-top: 290px;
-    margin-left: 980px;
-    
+.f {
+  display: flex;
+  flex-direction: row;
+  color: grey;
+  margin-top: 290px;
+  margin-left: 980px;
 }
 
-.hh{
-    border-radius: 725px;
-    width: 180px;
-    color: grey;
+.hh {
+  border-radius: 725px;
+  width: 180px;
+  color: grey;
 }
-
 
 .app {
-    font-family: sans-serif;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    
-    height: 80vh;
-    font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
-    background-color: white;
-    margin-top: -350px;
-  }
-  
-  input[type="text"],
-  input[type="password"] {
-    height: 25px;
-    border: 1px solid rgba(0, 0, 0, 0.2);
-    background-color:#ecebeb ;
-    border-radius: 10px;
-    padding: 5px 10px;
-  }
-  
-  input[type="submit"] {
-    margin-top: 10px;
-    cursor: pointer;
-    font-size: 15px;
-    background: #000000;
-    border: 1px solid rgb(68, 68, 68);
-    color: #fff;
-    padding: 10px 20px;
-    width: 340px;
-    border-radius:10px;
-  }
-  
-  input[type="submit"]:hover {
-    background: #000000;
-   
-  }
-  
-  .button-container {
-    display: flex;
-    justify-content: center;
-    
-  }
-  
-  .login-form {
-    background-color: white;
-    padding: 2rem;
-    height: 250px;
-    width: 360px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    border-radius: 15px;
-  }
-  
-  .list-container {
-    display: flex;
-  }
-  
-  .error {
-    color: red;
-    font-size: 12px;
-  }
-  
-  .title {
-    font-size: 25px;
-    margin-bottom: 20px;
-  }
-  
-  .input-container {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-    margin: 10px;
+  font-family: sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 80vh;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  background-color: white;
+  margin-top: -350px;
+}
+
+input[type="text"],
+input[type="password"] {
+  height: 25px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  background-color: #ecebeb;
+  border-radius: 10px;
+  padding: 5px 10px;
+}
+
+input[type="submit"] {
+  margin-top: 10px;
+  cursor: pointer;
+  font-size: 15px;
+  background: #000000;
+  border: 1px solid rgb(68, 68, 68);
+  color: #fff;
+  padding: 10px 20px;
+  width: 340px;
+  border-radius: 10px;
+}
+
+input[type="submit"]:hover {
+  background: #000000;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+}
+
+.login-form {
+  background-color: white;
+  padding: 2rem;
+  height: 250px;
+  width: 360px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 15px;
+}
+
+.list-container {
+  display: flex;
+}
+
+.error {
+  color: red;
+  font-size: 12px;
+}
+
+.title {
+  font-size: 25px;
+  margin-bottom: 20px;
+}
+
+.input-container {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin: 10px;
+}
+
+.f2 {
+  margin-top: 160px;
+  margin-left: 490px;
+}
+
+.fp {
+  color: #346BD4;
+}
+
+/* Media Queries */
+
+@media screen and (max-width: 900px) {
+  .container {
+    width: 100%;
+    margin: 0;
   }
 
-  .f2{
-    margin-top: 160px;
-    margin-left: 490px;
+  .f {
+    justify-content: center;
+    margin-left: 0;
   }
-  .fp{
-    color: #346BD4;
+
+  .hh {
+    width: 150px;
   }
+
+  .app {
+    margin-top: -50vh;
+  }
+
+  input[type="submit"] {
+    width: 100%;
+  }
+
+  .login-form {
+    width: 90%;
+  }
+
+  .f2 {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .container {
+    height: auto;
+    padding: 2rem;
+  }
+
+  .app {
+    margin-top: 0;
+  }
+
+  .login-form {
+    height: auto;
+    max-width: none;
+  }
+}
+.hhh{
+  margin-top: 8px;
+}
+
+.hhh span{
+  color: blue;
+}
+
+.sp{
+  display: flex;
+  flex-direction: column;
+}
+.hhhh{
+  padding: 2px;
+  margin-right: 10px;
+  position: absolute;
+  margin-left: 990px;
+  margin-top: -90px;
+  font-weight: 25px;
+}
+.hhhhh{
+  font-size: 40px;
+}
+
+.comtainer{
+  width: 100%;
+  height: 75vh;
+  background: linear-gradient(
+    to right,
+    black 0%,
+    black 25%,
+    white 25%,
+    white 100%
+  );
+}

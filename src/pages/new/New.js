@@ -4,6 +4,7 @@ import "./new.scss";
 import DriveFolderUploadOutlinedIcon from "@mui/icons-material/DriveFolderUploadOutlined";
 import { useState } from "react";
 import Sidebar from "../../components/sidebar/Siderbar";
+import Navbar from "../../components/navbar/Navbar";
 
 const New = ({ inputs, title }) => {
   const [file, setFile] = useState("");
@@ -13,7 +14,7 @@ const New = ({ inputs, title }) => {
       <Sidebar></Sidebar>
 
       <div className="newContainer">
-        
+        <Navbar></Navbar>
         <div className="top">
           <h1>{title}</h1>
         </div>

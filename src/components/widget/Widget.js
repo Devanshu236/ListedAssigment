@@ -15,15 +15,15 @@ const Widget = ({ type }) => {
   switch (type) {
     case "user":
       data = {
-        title: "USERS",
-        isMoney: false,
-        link: "See all users",
+        title: "Total Revenue",
+        isMoney: true,
+        //link: "See all users",
         icon: (
           <PersonOutlinedIcon
             className="icon"
             style={{
-              color: "crimson",
-              backgroundColor: "rgba(255, 0, 0, 0.2)",
+              color: "black",
+             
             }}
           />
         ),
@@ -31,15 +31,15 @@ const Widget = ({ type }) => {
       break;
     case "order":
       data = {
-        title: "ORDERS",
+        title: "Total Transactions",
         isMoney: false,
-        link: "View all orders",
+        //link: "View all orders",
         icon: (
           <ShoppingCartOutlinedIcon
             className="icon"
             style={{
-              backgroundColor: "rgba(218, 165, 32, 0.2)",
-              color: "goldenrod",
+             
+              color: "black",
             }}
           />
         ),
@@ -47,28 +47,30 @@ const Widget = ({ type }) => {
       break;
     case "earning":
       data = {
-        title: "EARNINGS",
-        isMoney: true,
-        link: "View net earnings",
+        title: "Total Likes",
+        isMoney: false,
+        //link: "View net earnings",
         icon: (
           <MonetizationOnOutlinedIcon
             className="icon"
-            style={{ backgroundColor: "rgba(0, 128, 0, 0.2)", color: "green" }}
+            style={{  color: "black" }}
           />
         ),
       };
       break;
     case "balance":
       data = {
-        title: "BALANCE",
-        isMoney: true,
-        link: "See details",
+        title: "Total Users",
+        isMoney: false,
+        
+        
+        //link: "See details",
         icon: (
           <AccountBalanceWalletOutlinedIcon
             className="icon"
             style={{
-              backgroundColor: "rgba(128, 0, 128, 0.2)",
-              color: "purple",
+             
+              color: "black",
             }}
           />
         ),
@@ -79,6 +81,8 @@ const Widget = ({ type }) => {
   }
 
   return (
+     <>
+    
     <div className="widget">
       <div className="left">
         <span className="title">{data.title}</span>
@@ -88,13 +92,12 @@ const Widget = ({ type }) => {
         <span className="link">{data.link}</span>
       </div>
       <div className="right">
-        <div className="percentage positive">
-          <KeyboardArrowUpIcon />
-          {diff} %
-        </div>
+        
+      
         {data.icon}
       </div>
     </div>
+    </>
   );
 };
 
